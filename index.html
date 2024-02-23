@@ -1,0 +1,1959 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Analog Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game Voucher for the ages">
+  <meta name="author" content="Treeclouds">
+
+  <link rel="icon" href="https://storage.googleapis.com/asto-stg/static/images/favicons/favico-blue.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+          integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Your stuff: Third-party CSS libraries go here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- This file stores project-specific CSS -->
+    <link href="https://storage.googleapis.com/asto-stg/static/css/project.css" rel="stylesheet">
+    <link href="https://storage.googleapis.com/asto-stg/static/css/main.css" rel="stylesheet"/>
+    <!-- DatetimePicker CSS -->
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          type="text/css" href="https://storage.googleapis.com/asto-stg/static/css/bootstrap-datetimepicker.css"/>
+    <script src="https://js.stripe.com/v3/" defer></script>
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+          integrity="sha512-aEe/ZxePawj0+G2R+AaIxgrQuKT68I28qh+wgLrcAJOz3rxCP+TwrK5SPN+E5I+1IQjNtcfvb96HDagwrKRdBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://storage.googleapis.com/asto-stg/static/css/autocomplete-js.css" rel="stylesheet"/>
+  
+  <!-- Le javascript
+  ================================================== -->
+  
+  
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+            integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Your stuff: Third-party javascript libraries go here -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- place project specific Javascript in this file -->
+    <script defer src="https://storage.googleapis.com/asto-stg/static/js/project.js"></script>
+    <!-- datetimepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+            integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"
+            integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"
+      integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://storage.googleapis.com/asto-stg/static/js/clipboard.min.js"></script>
+    <script src="https://unpkg.com/@trevoreyre/autocomplete-js"></script>
+
+  
+
+  
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T3PGGX6');</script>
+<!-- End Google Tag Manager -->
+
+  
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3PGGX6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<div style="margin-top: 100px;" class="desktop-only"></div>
+<div style="margin-top: 60px;" class="mobile-only"></div>
+
+
+
+
+<header>
+  <div class="menu__container">
+
+    <div class="d-flex justify-content-between align-items-center mobile-logo-banner mobile-only">
+      <a href="/">
+        <img src="https://storage.googleapis.com/asto-stg/static/images/icons/logo-analog-topnav.svg" alt="analog-logo" class="me-auto h-100">
+      </a>
+      <img id="mobile-search-btn" src="https://storage.googleapis.com/asto-stg/static/images/icons/search-black.svg" alt="search-icon" class="fa">
+    </div>
+
+    <div class="desktop-only">
+      <a href="/" class="d-flex justify-content-center align-items-center">
+        <img src="https://storage.googleapis.com/asto-stg/static/images/icons/logo-analog-topnav.svg" alt="analog-logo" class="h-100">
+      </a>
+    </div>
+
+    <div class="mobile-search d-flex justify-content-center align-items-center mobile-only none">
+      <img src="https://storage.googleapis.com/asto-stg/static/images/icons/analog-logo-3.svg" alt="analog-logo" class="mb-1 h-100 mobile-logo-search mobile-only none">
+      <div class="new-chat-window-mobile w-100 my-0">
+        <img src="https://storage.googleapis.com/asto-stg/static/images/icons/search-black.svg" alt="search-icon" class="fa pt-1">
+        <input type="text" name="search" class="new-chat-window-input" id="new-chat-window-input" placeholder="Search" />
+      </div>
+      <img src="https://storage.googleapis.com/asto-stg/static/images/icons/close.svg" alt="button-close" class="cursor-pointer mobile-search-close">
+    </div>
+
+    <div class="menu-list__desktop w-100">
+      <form method="" action="">
+        <img src="https://storage.googleapis.com/asto-stg/static/images/icons/search-black.svg" alt="search-icon" class="search-img pt-1">
+
+
+
+
+        <div id="autocomplete" class="new-chat-window-desktop autocomplete none">
+          <input class="autocomplete-input new-chat-window-input" placeholder="Search">
+          <ul class="autocomplete-result-list"></ul>
+        </div>
+      </form>
+      <a href="/pricelist/" class="menu-item__desktop semibold ">Price List</a>
+      <a href="/contact-us/" class="menu-item__desktop semibold ">Contact Us</a>
+      
+        <a href="/accounts/login/" class="button font-white">
+          Login
+        </a>
+      
+    </div>
+    <div class="menu-list__mobile">
+        <div class="menu-item__mobile">
+          <a href="/" class="font-small">
+            <div class="">
+              
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/home-active.svg" alt="home-icon">
+              
+            </div>
+            Beranda
+          </a>
+        </div>
+        <div class="menu-item__mobile">
+          <a href="/pricelist/" class="font-small">
+            <div class="">
+              
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/pricelist-default.svg" alt="pricelist-icon">
+              
+            </div>
+            Price List
+          </a>
+        </div>
+        <div class="menu-item__mobile">
+          <a href="/contact-us/" class="font-small">
+            <div class="">
+              
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/contact-default.svg" alt="contact-icon">
+              
+            </div>
+            Contact Us
+          </a>
+        </div>
+        <div class="menu-item__mobile">
+          <a href="/dashboards/transaction-history/" class="font-small">
+            <div class="">
+              
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/account-default.svg" alt="account-icon">
+              
+            </div>
+            Account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(document).ready(function () {
+    $(".search-img").click(function() {
+      $(".search-img").addClass("none");
+      $("#autocomplete").removeClass("none");
+    });
+
+    $("#mobile-search-btn").click(function () {
+      $(".mobile-logo-banner").addClass("none");
+      $(".mobile-logo-search").removeClass("none");
+      $(".mobile-search").removeClass("none");
+    });
+
+    $(".mobile-search-close").click(function () {
+      $(".mobile-logo-banner").removeClass("none");
+      $(".mobile-logo-search").addClass("none");
+      $(".mobile-search").addClass("none");
+    });
+  });
+
+  // $(window).scroll(function() {
+  //   var y = $(this).scrollTop();
+  //   if($(window).width() < 1024) {
+  //     if (y > 10) {
+  //       $(".menu__container").css({ 'justify-content' : '' });
+  //       $(".mobile-logo-banner").addClass("none");
+  //       $(".mobile-logo-search").removeClass("none");
+  //       $(".mobile-search").removeClass("none");
+
+  //     } else {
+  //       $(".mobile-logo-banner").removeClass("none");
+  //       $(".mobile-logo-search").addClass("none");
+  //       $(".mobile-search").addClass("none");
+  //     }
+  //   }
+  // });
+</script>
+
+
+
+
+
+
+
+
+
+<section class="splide" id="hero__slider">
+  <div class="position-relative section__width banner-p-0-mobile">
+    <div class="splide__track">
+      <div class="splide__list">
+        
+          <div class="splide__slide">
+            <div class="banner__item" style="--background-image-mobile: url('https://storage.googleapis.com/asto-stg/media/banners/banner-1-desktop-with-text.png'); --background-image-desktop: url('https://storage.googleapis.com/asto-stg/media/banners/banner-1-desktop-with-text.png');"></div>
+          </div>
+        
+          <div class="splide__slide">
+            <div class="banner__item" style="--background-image-mobile: url('https://storage.googleapis.com/asto-stg/media/banners/banner-2-desktop-with-text.png'); --background-image-desktop: url('https://storage.googleapis.com/asto-stg/media/banners/banner-2-desktop-with-text.png');"></div>
+          </div>
+        
+      </div>
+    </div>
+    <div class="splide__arrows" id="splide-instruction-arrows">
+      <button class="splide__arrow splide__arrow--prev">
+        <img src="https://storage.googleapis.com/asto-stg/static/images/icons/chevron-left-white.svg" alt="chevron-left-white">
+      </button>
+      <button class="splide__arrow splide__arrow--next">
+        <img src="https://storage.googleapis.com/asto-stg/static/images/icons/chevron-right-white.svg" alt="chevron-right-white">
+      </button>
+    </div>
+  </div>
+</section>
+
+  
+
+  
+
+  
+    <section class="section__width topup-primary__section">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <p class="heading-3 bold">Trending</p>
+        <a href="/browse-game/" class="semibold">Lihat Semua</a>
+      </div>
+      <div class="topup__wrapper">
+        
+          
+            
+
+<a href="/Users/user/Documents/aastore/tess.html">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/Genshin_XcJn6QF.png" alt="Genshin Impact">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Genshin Impact</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/238/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/HSR_uFQuCh8.jpg" alt="Honkai Star Rail">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Honkai Star Rail</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/24/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/mobile-legend.webp" alt="Mobile Legends">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Mobile Legends</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/505/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/Untitled-1.png" alt="Battle Pass Genshin &amp; HSR (Via Login)">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Battle Pass Genshin &amp; HSR (Via Login)</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/40/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/valorant.png" alt="Valorant">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Valorant</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/506/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/love_and_deepspace.jpg" alt="Love and Deepspace">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Love and Deepspace</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/223/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/undawn.png" alt="Garena Undawn">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Garena Undawn</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/59/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/honkai.png" alt="Honkai Impact 3">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Honkai Impact 3</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/12/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/ff.jpg" alt="Free Fire">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Free Fire</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/494/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/black_clover.png" alt="Black Clover Mobile">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Black Clover Mobile</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/501/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/pubg_QwM2Xu4.png" alt="PUBG Mobile (INDONESIA)">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">PUBG Mobile (INDONESIA)</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/87/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/tof-thumb-1-1660157954173.png" alt="Tower of Fantasy">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Tower of Fantasy</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/99/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/51e856a8c2f9aeb3ff0927dd6f9e7485.jpg" alt="Bigo Live">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Bigo Live</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/107/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/codm.png" alt="Call of Duty Mobile">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Call of Duty Mobile</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/141/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/LOL.jpeg" alt="League of Legends : Wild Rift">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">League of Legends : Wild Rift</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/174/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/rog_9lTaZFZ.jpg" alt="Ragnarok Origin Global">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Ragnarok Origin Global</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/173/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/rog_ecAUEGE.jpg" alt="Ragnarok Origin Global - Package">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Ragnarok Origin Global - Package</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+        
+      </div>
+    </section>
+  
+    <section class="section__width topup-primary__section">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <p class="heading-3 bold">Top Up Mobile Game</p>
+        <a href="/browse-game/" class="semibold">Lihat Semua</a>
+      </div>
+      <div class="topup__wrapper">
+        
+          
+            
+
+<a href="/orders/create/92/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/ace.jpg" alt="Ace Racer">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Ace Racer</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/235/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/arena.png" alt="Arena Breakout">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Arena Breakout</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/94/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/Untitled.jpeg" alt="Arena of Valor">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Arena of Valor</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/100/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/bleach.png" alt="BLEACH Mobile 3D">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">BLEACH Mobile 3D</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/101/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/Be_the_king.png" alt="Be The King">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Be The King</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/482/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/bloodstrike.png" alt="Blood Strike">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Blood Strike</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/208/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/brawlstars.png" alt="Brawl Stars">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Brawl Stars</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/52/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/chimeraland.jpg" alt="Chimeraland">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Chimeraland</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/209/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/CR.jpeg" alt="Clash Royale - ID Number">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Clash Royale - ID Number</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/210/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/COC.png" alt="Clash of Clans - ID Number">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Clash of Clans - ID Number</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/513/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/DMC.png" alt="Devil May Cry Peak of Combat">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Devil May Cry Peak of Combat</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/375/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/ea_sports_fc_mobile.png" alt="EA SPORTS FC Mobile">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">EA SPORTS FC Mobile</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/115/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/Echocalypse.png" alt="Echocalypse">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Echocalypse</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/250/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/eggy.png" alt="Eggy Party">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Eggy Party</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/221/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/ensemble.jpg" alt="Ensemble Stars Music">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Ensemble Stars Music</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/158/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/Goddess_of_Victory.png" alt="Goddess of Victory : Nikke">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Goddess of Victory : Nikke</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/499/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/hago.png" alt="HAGO">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">HAGO</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/381/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/hatsunemiku.png" alt="HATSUNE MIKU: COLORFUL STAGE!">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">HATSUNE MIKU: COLORFUL STAGE!</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/225/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/356227166_104361176045225_1048852296830430306_n.jpg" alt="Harry Potter: Magic Awakened">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Harry Potter: Magic Awakened</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/212/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/hayday.png" alt="Hay Day">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Hay Day</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/243/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/idv.png" alt="Identity V">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Identity V</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/133/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/1587624850-icon-idle_legends.png" alt="Idle Legends : GODS SAGA">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Idle Legends : GODS SAGA</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/256/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/legends_of_runeterra.png" alt="Legends of Runeterra">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Legends of Runeterra</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/19/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/lifeafter.png" alt="LifeAfter">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">LifeAfter</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/137/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/lita.png" alt="Lita">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Lita</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/138/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/lokapala.jpg" alt="Lokapala">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Lokapala</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/140/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/LM.jpeg" alt="Lords Mobile">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Lords Mobile</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/489/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/maple_story_r.webp" alt="MapleStory R">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">MapleStory R</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/152/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/marvel_snap.jpeg" alt="Marvel Snap">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Marvel Snap</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/153/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/marvel_super_war.jpeg" alt="Marvel Super War">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Marvel Super War</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/244/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/metalslug.png" alt="Metal Slug : Awakening">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Metal Slug : Awakening</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/163/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/OPM.jpeg" alt="One Punch Man">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">One Punch Man</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/527/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/One_punch_man_world.png" alt="One Punch Man World">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">One Punch Man World</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/385/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/punishing.jpg" alt="Punishing: Gray Raven">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Punishing: Gray Raven</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/178/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/revelation_mobile.png" alt="Revelation Mobile">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Revelation Mobile</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/3/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/sausageman.webp" alt="Sausage Man">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Sausage Man</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+            
+
+<a href="/orders/create/179/">
+  <div class="card-topup__item card__border">
+    <div class="card-topup__img">
+      <img src="https://storage.googleapis.com/asto-stg/media/games/seal.jpeg" alt="Seal M SEA">
+
+      
+    </div>
+    <div class="card-topup__content">
+      <p class="font-extra-small semibold"></p>
+      <div class="">
+        <p class="bolder">Seal M SEA</p>
+        <p class="bolder"></p>
+      </div>
+      
+      <button class="button button--small w-100">TOP UP</button>
+    </div>
+  </div>
+</a>
+
+          
+        
+      </div>
+    </section>
+  
+
+  
+
+  
+
+  
+
+<div class="topup-benefit__section">
+	<div class="section__width">
+		<h1 class="heading-1 bold font-white text-align-center mb-5">KENAPA HARUS TOP UP DI ANALOG STORE?</h1>
+		<div class="topup-benefit__content">
+			<div class="topup-benefit__card">
+				<div class="">
+					<img src="https://storage.googleapis.com/asto-stg/static/images/icons/more_time.svg" alt="selalu-online-img" >
+				</div>
+				<div>
+					<h3 class="heading-3 bold">SELALU ONLINE</h3>
+					<p class="semibold">Setiap hari 24 Jam</p>
+				</div>
+			</div>
+			<div class="topup-benefit__card">
+				<div class="">
+					<img src="https://storage.googleapis.com/asto-stg/static/images/icons/fact_check.svg" alt="ready-stock-img">
+				</div>
+				<div>
+					<h3 class="heading-3 bold">READY STOCK</h3>
+					<p class="semibold">Stock selalu ready terus</p>
+				</div>
+			</div>
+			<div class="topup-benefit__card">
+				<div class="">
+					<img src="https://storage.googleapis.com/asto-stg/static/images/icons/verified_user.svg" alt="aman-img">
+				</div>
+				<div>
+					<h3 class="heading-3 bold">AMAN 100%</h3>
+					<p class="semibold">Anti login login boss!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+  
+
+
+<section class="splide" id="review__slider">
+  <div class="position-relative section__width">
+  <p class="heading-1 bold text-align-center my-4 px-4">"Masih ragu top up di sini?" 🤔</p>
+    <div class="splide__track">
+      <div class="splide__list">
+        <div class="splide__slide">
+          <!-- Review Card -->
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Kalau kamu cari yang murah aja, silahkan kesebelah. Tapi kalau cari yang murah, aman, legal, dan cuma via UID. Analog Store jawabannya"
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials-lamiosa.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">Lamiosa</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Review Card -->
+        </div>
+
+        <div class="splide__slide">
+          <!-- Review Card -->
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Analog Store mantep bet, proses cepat, murah, aman, adminnya juga ramah bgt. ga nyesel langganan topup di sini"
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials-maysa.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">Maysa_kz</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Review Card -->
+        </div>
+
+        <div class="splide__slide">
+          <!-- Review Card -->
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Adminnya baikk, friendly, prosesnyaa juga cepatt pula, mantap pokoknya disini!"
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials-ruka.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">rukaaci</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Review Card -->
+        </div>
+
+        <div class="splide__slide">
+          <!-- Review Card -->
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Ngisi welkin jangan lupa harus di analogstore, biar gachamu harum dan mantap selalu seperti Keqing."
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials/riki-ayatsu.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok_ig.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok-ig">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">riki_ayatsu</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Review Card -->
+        </div>
+
+        <div class="splide__slide">
+          <!-- Review Card -->
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Buat yang nyari tempat top up, ya jelas di Analog Store! Selain terpercaya dan harga miring, pelayanan adminnya bintang 5!"
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials/RaffNotGG.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">RaffNotGG</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Review Card -->
+        </div>
+
+        <div class="splide__slide">
+          <!-- Review Card -->
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Adminnya ramah bangettt, family friendly dan super fast respond!, asik diajak temenan wakakakaka, Top up hepi, anti minusssss."
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials/ver_kun.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">ver_kun</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Review Card -->
+        </div>
+
+        <div class="splide__slide">
+          <!-- Review Card -->
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Top up di analog primo nya super wangi murah dan fast respond parahh, satu2nya tempat topupku ya cuman analog dongg hehehe"
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials/CandyCherina.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">CandyCherina</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="splide__slide">
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"udah SETAHUN lebih langganan analogstore, ngga ada masalah sama sekali, adminnya ramah banget pula, trus dapet invoice tiap top up jadi terjamin!!"
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials/KareemRz.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">KareemRz</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="splide__slide">
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Webnya keren banget, udah CS nya fast respon, website lebih kenceng lagi! Solusi top up anti minusmu ya cuma Analog Store"
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials/GameDude.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">GameDude</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Review Card -->
+        </div>
+
+        <div class="splide__slide">
+          <!-- Review Card -->
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Terakhir aku beli skin Diluc di Analog Store! Harganya hemat, prosesnya beneran cepat, dan adminnya juga responsif setiap ada pertanyaan! Sampai saat ini masih jadi tempat top up terbaik menurutku!"
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials/Kevin-Samuel-Lee.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">Kevin Samuel Lee</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="splide__slide">
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Kalo cari yang murah itu sudah biasa, tapi kalo yang setia dan selalu fast respon lebih dari gebetanmu Analog Store kuncinya😍 Jadikan analog simpananmu 👌"
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials/Kevin-Chandra.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">Kevin Chandra</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="splide__slide">
+          <div class="card-testimonials__item">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/quote.svg" class="card-testimonials__icon-quote" alt="quote icon">
+            <p class="card-testimonials__content heading-4 semibold text-dark-blue">"Udah paling juara dah. Paling cepet, harga murah, admin ramah fast resp, via UID. Gaada saingan sih, Analog selalu di hati 💖."
+            </p>
+            <div class="card-testimonials__footer">
+              <div class="card-testimonials__img-wrapper">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/testimonials/Sky-si-Pawang-Jean.png" alt="testimonials-img" class="card__border">
+                <img src="https://storage.googleapis.com/asto-stg/static/images/icons/tiktok.svg" alt="testimonials-img" class="card-testimonials__icon-tiktok">
+              </div>
+              <div class="card-testimonials__text-wrapper">
+                <p class="bold text-white">Sky si Pawang Jean</p>
+                <p class="text-white">Genshin Impact Influencer</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Review Card -->
+        </div>
+      </div>
+    </div>
+    <div class="splide__arrows" id="splide-instruction-arrows">
+      <button class="splide__arrow splide__arrow--prev">
+        <img src="https://storage.googleapis.com/asto-stg/static/images/icons/chevron-left-white.svg" alt="chevron-left-white">
+      </button>
+      <button class="splide__arrow splide__arrow--next">
+        <img src="https://storage.googleapis.com/asto-stg/static/images/icons/chevron-right-white.svg" alt="chevron-right-white">
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  
+
+<div class="achievements__wrapper position-relative">
+  <div class="section__width">
+    <div class="achievements-img__wrapper d-grid">
+      <img src="https://storage.googleapis.com/asto-stg/static/images/achievement-img.png" alt="achievements-img" class="achievements__img">
+    </div>
+  </div>
+  <div class="section__width position-relative">
+    <div class="achievements__content">
+      <div class="achievements__item">
+        <p class="heading-1 bolder text-align-center mb-2">17.7K+</p>
+        <p class="heading-4 bolder text-align-center">FOLLOWERS</p>
+        <p class="text-align-center">On Instagram</p>
+      </div>
+      <div class="achievements__item">
+        <p class="heading-1 bolder text-align-center mb-2">20K+</p>
+        <p class="heading-4 bolder text-align-center">HAPPY CUSTOMERS</p>
+        <p class="text-align-center">Orders at Analog Store</p>
+      </div>
+      <div class="achievements__item">
+        <p class="heading-1 bolder text-align-center mb-2">2.2K+</p>
+        <p class="heading-4 bolder text-align-center">5-STAR RATINGS</p>
+        <p class="text-align-center">on Shopee</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<footer class="footer__container">
+  <div class="section__width">
+    <div class="footer__wrapper">
+      <div class="payment__options">
+        <p class="bold mb-3">Tersedia Pembayaran</p>
+        <div class="payment-img__wrapper">
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/BNI.png" alt="bni-logo">
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/BRI.png" alt="bri-logo">
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/MANDIRI.png" alt="mandiri-logo">
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/PERMATA.png" alt="permata-logo">
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/BCA.png" alt="bca-logo">
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/GOPAY.png" alt="gopay-logo">
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/SHOPEEPAY.png" alt="shopeepay-logo">
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/QRIS.png" alt="qris-logo">
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/ALFA.png" alt="qris-logo">
+        </div>
+      </div>
+      <div class="footer-links__wrapper">
+        <p class="bold mb-3">Useful Links</p>
+        <div class="footer-links__item">
+          <a href="/browse-game/" class="semibold">Game</a>
+          <a href="/faq/" class="semibold">FAQ</a>
+          <a href="/terms-and-conditions/" class="semibold">Syarat & Ketentuan</a>
+        </div>
+      </div>
+      <div class="footer-medsos__wrapper">
+        <p class="bold desktop-only mb-3">Get in Touch</p>
+        <div class="footer-links__item footer-medsos__item">
+          <p>
+            <a href="https://www.instagram.com/analogstore_id/" target="_blank" class="text-besides-icon">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/icons_instagram-fill.svg" alt="instagram-icon">
+              <span class="semibold desktop-only">analogstore_id</span>
+            </a>
+          </p>
+          <p>
+            <a href="https://wa.me/6281212626896" target="_blank" class="text-besides-icon">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/whatsapp-black.svg" alt="whatsapp-icon">
+              <span class="semibold desktop-only">081212626896</span>
+            </a>
+          </p>
+          <p>
+            <a href="https://twitter.com/analogstore_id" target="_blank" class="text-besides-icon">
+              <img src="https://storage.googleapis.com/asto-stg/static/images/icons/twitter-black.svg" alt="store-icon">
+              <span class="semibold desktop-only">analogstore_id</span>
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="footer__logo">
+        <div>
+          <img src="https://storage.googleapis.com/asto-stg/static/images/icons/logo-analog-footer.svg" alt="analog-logo" >
+          <p class="desktop-only">Specialist Top Up Super Kilat!</p>
+        </div>
+        <div class="footer__description">
+          <p class="mobile-only text-align-center mb-3">Specialist Top Up Super Kilat!</p>
+          <p class="footer-copywright semibold">Est. 2019</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      $(".search-img").click(function() {
+        $(".search-img").addClass("none");
+        $(".new-chat-window").removeClass("none");
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#hero__slider', {
+        type   : 'loop',
+        perPage: 1,
+        perMove: 1,
+        gap: "20px",
+        pagination: true,
+        width: "100%",
+        autoplay: true,
+  		  autoplaySpeed: 4000,
+
+        breakpoints: {
+          640: {
+            perPage: 1,
+            arrows: false,
+          }
+        },
+      }).mount();
+
+      new Splide('#review__slider', {
+        type   : 'loop',
+        perPage: 3,
+        perMove: 1,
+        gap: "20px",
+        pagination: true,
+        // width: "100%",
+        autoplay: true,
+        autoplaySpeed: 4000,
+
+        breakpoints: {
+          640: {
+            type   : 'loop',
+            perPage: 1,
+            arrows: false,
+            // width: "100%",
+          },
+        },
+      }).mount();
+    });
+  </script>
+
+
+
+  
+
+
+<script>
+  new Autocomplete('#autocomplete', {
+    search: input => {
+      if (input.length < 1) {
+        return []
+      }
+      const url = "/game-search/?q=" + input;
+      return new Promise(resolve => {
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            resolve(data.data);
+          })
+      })
+    },
+    // We want to display the name
+    getResultValue: result => result.name,
+
+    // Open the selected game in
+    onSubmit: result => {
+      const id = result.id;
+      window.open(`/orders/create/${id}`, '_blank');
+    }
+  });
+</script>
+</body>
+</html>
